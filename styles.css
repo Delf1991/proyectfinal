@@ -1,0 +1,59 @@
+/* Estilo para el modo oscuro */
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+/* Transición suave para el fondo y el color del texto */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: background-color 0.8s ease, color 0.8s ease; /* Duración de 0.8 segundos */
+}
+
+/* Modo oscuro: transición suave */
+body.dark-mode header {
+    background-color: #6C42EC;
+    transition: background-color 0.8s ease; /* Duración de 0.8 segundos */
+}
+
+body.dark-mode .section {
+    background-color: #6C42EC;
+    transition: background-color 0.8s ease; /* Duración de 0.8 segundos */
+}
+
+/* Otros elementos que podrían necesitar transición */
+header {
+    background-color: #9B70D7;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    transition: background-color 0.8s ease; /* Duración de 0.8 segundos */
+}
+
+/* Transición para los botones */
+.btn-custom {
+    background-color: #9B70D7;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease; /* Transición para el color del fondo */
+}
+
+body.dark-mode .btn-custom {
+    background-color: #6C42EC;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #6C42EC;
+    transition: background-color 0.3s ease;
+}
+
+.taytay {
+    width: 100px; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantiene las proporciones originales */
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web sobre Taylor Swift con información de su carrera, logros y más.">
+    <meta name="keywords" content="Taylor Swift, música, carrera, logros, artista, cantante">
+    <meta name="author" content="Tu Nombre">
+    <title>Mi Página sobre Taylor Swift</title>
+
+    <!-- Google Fonts (fuentes personalizadas) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 (librería de diseño) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        header {
+            background-color: #9B70D7;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Flexbox para maquetado */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .section {
+            padding: 30px;
+            background-color: #D8A7F7;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        /* Modo oscuro */
+        body.dark-mode {
+            background-color: #333;
+            color: white;
+        }
+
+        body.dark-mode header {
+            background-color: #6C42EC;
+        }
+
+        body.dark-mode .section {
+            background-color: #6C42EC;
+        }
+
+        /* Media Queries para responsividad */
+        @media (max-width: 768px) {
+            header {
+                padding: 30px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+
+        /* Estilo de botones personalizados */
+        .btn-custom {
+            background-color: #9B70D7;
+            color: white;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #6C42EC;
+        }
+
+        /* Estilo de cards para Bootstrap */
+        .card {
+            width: 100%;
+            max-width: 320px;
+            margin: 10px auto;
+        }
+
+        .carousel-item img {
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        /* Imagen responsiva */
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Animación de la transición de mostrar/ocultar información */
+        #web-info {
+            display: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Estilo de las estrellas en las esquinas */
+        .star {
+            position: absolute;
+            font-size: 3rem;
+            color: gold;
+            z-index: 1000;
+        }
+
+        .star.top-left {
+            top: 10px;
+            left: 10px;
+        }
+
+        .star.top-right {
+            top: 10px;
+            right: 10px;
+        }
+
+        .star.bottom-left {
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .star.bottom-right {
+            bottom: 10px;
+            right: 10px;
+        }
+
+        /* Centrar la imagen de Taylor Swift */
+        .img-center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80%; /* Ajusta el tamaño de la imagen */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Estrellitas en las esquinas -->
+    <div class="star top-left">★</div>
+    <div class="star top-right">★</div>
+    <div class="star bottom-left">★</div>
+    <div class="star bottom-right">★</div>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Bienvenido a la Página de Taylor Swift</h1>
+        <!-- Botón de modo oscuro -->
+        <button class="btn btn-custom" id="dark-mode-toggle">Modo Oscuro</button>
+        <button class="btn btn-custom" id="web-info-toggle">Mostrar Datos del Webnaste</button>
+    </header>
+
+    <!-- Sección 1: Información sobre Taylor Swift -->
+    <section class="section" id="about">
+        <h2>¿Quién es Taylor Swift?</h2>
+        <!-- Imagen de Taylor Swift centrada -->
+        <img src="https://i.abcnewsfe.com/a/d7ab5c90-e10a-4390-92b4-5c3ce766588e/Taylor-Swift-gty-gmh-240107_1704675614628_hpMain_16x9.jpg?w=992" class="img-center mb-3" alt="Taylor Swift">
+        <p>
+            Taylor Swift es una cantante, compositora y actriz estadounidense, famosa por su capacidad de conectar con
+            sus seguidores a través de sus letras profundas y su evolución musical. Nació el 13 de diciembre de 1989 en
+            Reading, Pennsylvania, y comenzó su carrera musical a una edad temprana. Su habilidad para escribir canciones
+            personales y emotivas la ha convertido en una de las artistas más influyentes de la música contemporánea.
+        </p>
+    </section>
+
+    <section class="section" id="curious-facts">
+        <h2>Datos curiosos sobre Taylor Swift</h2>
+        <ul class="curious-facts">
+            <li>Su número preferido es el 13.</li>
+            <li>Su nombre completo es Taylor Alison Swift.</li>
+            <li>Se convirtió en la persona más joven en escribir temas sin ayuda de nadie y en la compositora más joven también en pertenecer por Sony.</li>
+            <li>La historia detrás de su hit romántico “Love Story” está inspirada en la famosa obra de William Shakespeare, Romeo y Julieta.</li>
+            <li>Escribió todo su álbum Speak Now sola.</li>
+        </ul>
+    </section>
+
+    <!-- Sección 2: Canal de YouTube -->
+    <section class="section" id="youtube">
+        <h2>Visita el Canal de YouTube de Taylor Swift</h2>
+        <p>Descubre los últimos vídeos, entrevistas y conciertos exclusivos de Taylor Swift en su canal oficial de YouTube.</p>
+        <a href="https://www.youtube.com/user/taylorswift" target="_blank" class="btn btn-custom">Ir al Canal</a>
+    </section>
+
+    <!-- Sección 3: Mapa de la ciudad natal de Taylor Swift -->
+    <section class="section" id="map">
+        <h2>Ubicación de Reading, Pennsylvania</h2>
+        <p>Esta es la ciudad natal de Taylor Swift, donde nació el 13 de diciembre de 1989.</p>
+        <!-- Mapa interactivo de Google -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079356.6560462825!2d-80.24562877016095!3d41.08682109643712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882d80261e32e589%3A0xc24621475022b43d!2sPennsylvania%2C%20USA!5e0!3m2!1sen!2sar!4v1736023125141!5m2!1sen!2sar"
+  width="100%"
+  height="400"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+
+    <!-- Sección 4: Carousel de Álbumes -->
+    <section class="section" id="albums">
+        <h2>Álbumes Más Famosos</h2>
+        <h3>Fearless, 1989 y Reputation son tres de los álbumes más conocidos de la estrella pop</h3>
+        <div id="albumCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- Imagen de Fearless -->
+                    <img src="https://i.pinimg.com/736x/8b/14/8e/8b148e1e5cc76dc641fefe6923135553.jpg" class="d-block w-100" alt="Fearless">
+                </div>
+                <div class="carousel-item">
+                    <!-- Imagen de 1989 (Taylor's Version) -->
+                    <img src="https://www.udiscovermusic.com/wp-content/uploads/2023/08/1989-Taylors-Version-820x820.jpg" class="d-block w-100" alt="1989">
+                </div>
+                <div class="carousel-item">
+                    <!-- Imagen de Reputation -->
+                    <img src="https://th.bing.com/th/id/OIP.XFXIrf2bIaok0UqRN7igLgAAAA?rs=1&pid=ImgDetMain" class="d-block w-100" alt="Reputation">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#albumCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#albumCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Sección 5: Logros de Taylor Swift -->
+    <section class="section" id="achievements">
+        <h2>Logros y Premios</h2>
+        <div class="card">
+            <!-- Enlace a la imagen de los Grammys -->
+            <a href="https://www.grammy.com/grammys/artists/taylor-swift" target="_blank">
+                <img src="https://images.moneycontrol.com/static-mcnews/2021/03/AP21074143328188.jpg" alt="Taylor at Grammys" class="img-fluid" style="width: 100%; height: auto; object-fit: cover;">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Premios Grammy</h5>
+                <p class="card-text">
+                    Taylor Swift ha sido nominada a 52 premios Grammy y ha ganado 11. Entre sus premios se encuentran tres veces ganadora a Álbum del Año en 2010 por "Fearless", 2016 por "1989" y en 2021 por "Folklore".
+                </p>
+                <a href="https://www.grammy.com/grammys/artists/taylor-swift" target="_blank" class="btn btn-custom">Ver Más</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="achievements">
+    <h2>Los mayores logros de Taylor</h2>
+    <p>
+        Taylor Swift (Pensilvania, 1989) es una de las artistas más importantes de su generación y, con permiso de Madonna, la natural sucesora al trono del pop. Y es que, en menos de veinte años desde que comenzara su andadura profesional con apenas 16, ha conseguido revolucionar la industria musical.
+    </p>
+    <p>
+        Pero, ¿cómo lo ha hecho? Repasamos algunos de los hitos que han marcado su carrera.
+    </p>
+    <ul>
+        <li>Tim McGraw (2006), el primer sencillo de Taylor Swift de su álbum homónimo, fue su primera aparición en Billboard Hot 100 y en la lista de canciones de estilo country. Tenía tan solo 16 años.</li>
+        <li>Su primera gran gira en abril 2009. Tras el lanzamiento de su segundo álbum Fearless, la artista anunció su primera gira con un recorrido por 52 ciudades estadounidenses.</li>
+        <li>Ganadora más joven del Grammy a Álbum del año (2010): Swift fue nominada y ganó un Grammy al Álbum del Año por Fearless, convirtiéndose en la persona más joven en la historia en hacerlo.</li>
+        <li>Es la artista con más AMAs. Swift tiene 34 estatuíllas de los American Music Awards, más que cualquier otro artista.</li>
+        <li>Escribe su propia música y lo hace a un ritmo demencial. Swift está acreditada como escritora o coescritora en todas sus canciones.</li>
+        <li>Atesora varios récords, pero uno que nos ha llamado la atención es que Taylor Swift es la artista con más premios Grammy a Mejor álbum del año (4) por Midnights (2024), Folklore (2021), 1989 (2016) y Fearless (2010). Es la primera y única artista en conseguirlo, por encima de leyendas de la música como Michael Jackson, Paul Simon y Frank Sinatra.</li>
+        <li>La mujer mejor pagada de la música en la década de 2010: Swift fue la mujer más pagada de la música en la década de 2010, y en 2024 ha sido la primera artista en entrar en la Lista Forbes gracias exclusivamente a su música.</li>
+        <li>Es una firme defensora de los derechos de las mujeres. El suyo ha sido un altavoz esencial para defender los derechos de las mujeres, no solo a través de sus letras, también de su forma de pensar y de actuar. En canciones como The Man, extraída de su álbum Lover (2019), critica el privilegio de los hombres, pero hay muchos más ejemplos. Además, en 2017 fue nombrada por la revista Time como una "rompedora del silencio" por no callarse ante los abusos sexuales que estaba conociendo el mundo en plena campaña del Me Too.</li>
+        <li>Shake it off es su mayor éxito hasta la fecha. Se trata de su canción más reproducida en YouTube con 3.423 millones de plays. Este éxito, que pertenece a su álbum 1989, publicado en 2014, cumple precisamente su décimo aniversario este 2024.</li>
+        <li>Regrabación de toda su discografía para conseguir los royalties de su música. La artífice de Reputation ha regrabado y editado toda su música anterior a 2008, lo que se conoce como Taylor's version, para que los seis discos que lanzó con Big Machine Records quedaran bajo su propio control creativo.</li>
+        <li><strong>Bonus track:</strong> The Eras Tour o una gira mundial extensísima y millonaria. Gracias a esta multitudinaria gira de estadios que arrancó el 17 de marzo de 2023 en Arizona. Este periplo de conciertos continúa en 2024 con más conciertos en Europa (y parada en España). Gracias a estos shows, Taylor Swift se ha convertido en millonaria. Como leemos en medios como Time y The Washington Post, según las estimaciones de Peter Cohan, profesor de gestión en Babson College, Swift podría ganar hasta 4.000 millones de dólares. Esto suponiendo que Swift se queda con un 85% de los ingresos de su gira y estando las entradas a un precio medio de 456 dólares. Estas ganancias serían las más altas de una sola gira para cualquier acto musical hasta la fecha. Sin embargo, son solo estimaciones.</li>
+        <img src="https://s.hdnux.com/photos/01/33/22/57/23931861/3/1200x0.jpg" alt="Imagen de Taylor Swift" class="taytay">
+    </ul>
+    <p>
+        Estos son solo algunos de los muchos logros de Taylor Swift en su carrera, pero es solo el principio. La artista acaba de lanzar su álbum <em>The Tortured Poets Department</em> (2024) y seguro que con él está más cerca de marcar nuevos checkmarks.
+    </p>
+</section>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5">
+        <p>© 2025 Página sobre Taylor Swift. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Datos del Webnaste (ocultos inicialmente) -->
+    <div id="web-info" class="container">
+        <div class="alert alert-info" role="alert">
+            <p>Esta página fue desarrollada como parte de un proyecto de clase sobre diseño web.</p>
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap y JS personalizados -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Script para modo oscuro
+        document.getElementById("dark-mode-toggle").addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+            const modeButton = document.getElementById("dark-mode-toggle");
+            // Cambiar el texto del botón según el modo
+            if (document.body.classList.contains("dark-mode")) {
+                modeButton.textContent = "Modo Claro";
+            } else {
+                modeButton.textContent = "Modo Oscuro";
+            }
+        });
+
+        // Script para mostrar/ocultar los datos del Webnaste
+        document.getElementById("web-info-toggle").addEventListener("click", function() {
+            var webInfo = document.getElementById("web-info");
+            webInfo.style.display = (webInfo.style.display === "none" || webInfo.style.display === "") ? "block" : "none";
+        });
+    </script>
+</body>
+
+</html>
